@@ -6,21 +6,13 @@
 
 #include <vector>
 
-class Generic : public User{
+class Generic : public User {
     private:
         std::vector<Ticket> outgoingTickets;
     public:
-        Generic(std::string u, std::string p){
-            setUsernamePassword(u,p);
-        }
-        void createTicket(std::string c, std::string t){
-            outgoingTickets.push_back(Ticket(c, t, getUsername()));
-        }
-        void printTickets(){
-            for(int i = 0; i < outgoingTickets.size(); i++){
-                outgoingTickets[i].printTicket();
-            }
-        }
+        Generic(std::string u, std::string p);
+        void createTicket(std::string c, std::string t);
+        void printTickets();
 };
 
 #endif

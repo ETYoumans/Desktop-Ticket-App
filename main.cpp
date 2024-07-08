@@ -1,13 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
 #include "admin.h"
-//#include "ticket.h"
-//#include "employee.h"
+#include "ticket.h"
+#include "employee.h"
 #include "generic.h"
-//#include "user.h"
-
+#include "user.h"
+using namespace std;
 
 void testObjects(){
     Admin adminAccount = Admin();
@@ -25,10 +24,7 @@ void testTicket(){
     std::string tag = "Testing Tag";
     testUser.createTicket(content, tag);
     testUser.printTickets();
-
 }
-
-
 
 
 int main() {
@@ -36,7 +32,6 @@ int main() {
 
     testObjects();
     testTicket();
-
 
     return 0;
 }
